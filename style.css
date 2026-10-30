@@ -581,16 +581,31 @@ summary::-webkit-details-marker {
   align-items: center;
   gap: 16px;
 }
-.campaign__target {
-  font-size: 1.8rem;
-  font-weight: 500;
-  line-height: 1;
+.campaign__limit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.campaign__limitLabel {
+  padding: 2px 6px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #216ca4;
+  background-color: #fff;
+}
+.campaign__limitDate {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.1;
 }
 .campaign__prices {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  margin-right: 96px;
 }
 .campaign__before {
   position: relative;
@@ -633,16 +648,15 @@ summary::-webkit-details-marker {
 }
 .campaign__badge {
   position: absolute;
-  top: -29px;
-  left: 264px;
-  width: 90.5px;
+  top: 26px;
+  left: 265px;
+  width: 98px;
 }
 .campaign__note {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.4rem;
+  font-weight: 500;
   line-height: 1;
   text-align: center;
-  white-space: nowrap;
 }
 
 /* ============================================ */
@@ -2017,18 +2031,32 @@ summary::-webkit-details-marker {
 }
 .access__item {
   display: flex;
+  align-items: flex-start;
   gap: 16px;
 }
 .access__icon {
   flex-shrink: 0;
   width: 16px;
+  height: 23px;
 }
 .access__item + .access__item .access__icon {
   width: 17px;
+  height: 24px;
+}
+.access__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 .access__text {
   font-size: 1.2rem;
   line-height: 1.7;
+}
+.access__map {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #717171;
+  text-decoration: underline;
 }
 
 /* ============================================ */
