@@ -135,13 +135,11 @@ summary::-webkit-details-marker {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -6px;
-  transform: translateX(-50%);
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #fff;
+  bottom: -4px;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  transform: translateX(-50%) rotate(45deg);
 }
 .btnLabel--small {
   font-size: 1.1rem;
