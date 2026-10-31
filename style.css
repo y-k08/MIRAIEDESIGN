@@ -3615,3 +3615,14 @@ summary::-webkit-details-marker {
     top: -30px;
   }
 }
+
+/* 1440px以上：ヘッダーとバッジは1440pxの位置を最大にして、それ以上は広げない */
+@media (min-width: 1440px) {
+  .header {
+    padding-left: calc((100vw - 1440px) / 2 + 20px);
+    padding-right: calc((100vw - 1440px) / 2 + 20px);
+  }
+  .campaign__badge {
+    right: calc((100% - 1440px) / 2 + 50px);
+  }
+}
