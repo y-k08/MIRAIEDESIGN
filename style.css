@@ -2139,3 +2139,1479 @@ summary::-webkit-details-marker {
   text-align: center;
   color: rgba(79, 91, 102, 0.5);
 }
+
+/* ============================================ */
+/* PC / タブレット用パーツ（SPでは非表示） */
+/* ============================================ */
+.header,
+.fv__photos,
+.clinic__logo,
+.clinic__doctor,
+.u-pc {
+  display: none;
+}
+
+/* ============================================ */
+/* PC / タブレット (768px以上)                  */
+/* ※ SP(767px以下)の見た目は一切変更しない      */
+/* ============================================ */
+@media (min-width: 768px) {
+  /* ---------- base ---------- */
+  html {
+    scroll-padding-top: 89px;
+  }
+  body {
+    background-color: #fff;
+  }
+  .u-sp {
+    display: none !important;
+  }
+  .u-pc {
+    display: revert;
+  }
+  .content-wrap {
+    max-width: none;
+  }
+  .fixed-btn {
+    display: none;
+  }
+
+  /* ---------- header ---------- */
+  .header {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 300;
+    height: 89px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 1px 10px rgba(79, 91, 102, 0.08);
+  }
+  .header__logo {
+    display: block;
+    flex-shrink: 0;
+  }
+  .header__logo img {
+    width: 106px;
+    height: auto;
+  }
+  .header__nav {
+    margin-left: auto;
+  }
+  .header__list {
+    display: flex;
+    align-items: center;
+  }
+  .header__list a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 0 16px;
+    color: #333;
+    transition: opacity 0.2s;
+  }
+  .header__list a:hover {
+    opacity: 0.6;
+  }
+  .header__en {
+    font-family: Marcellus, Optima, Segoe UI, Helvetica Neue, Arial, serif;
+    font-size: 1.7rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  .header__ja {
+    font-size: 1rem;
+    line-height: 1;
+    color: #b0b0b0;
+    white-space: nowrap;
+  }
+  .header__btn {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 240px;
+    height: 55px;
+    margin-left: 20px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+    background:
+      linear-gradient(90deg, #25a005 0, #6db45a 100%) padding-box,
+      linear-gradient(90deg, #6db45a 0, #25a005 100%) border-box;
+    border: 1.8px solid transparent;
+    border-radius: 999px;
+    transition: opacity 0.2s;
+  }
+  .header__btn:hover {
+    opacity: 0.85;
+  }
+
+  /* ---------- 共通：ボタン ---------- */
+  .btnWrap {
+    width: min(438px, 100%);
+  }
+  .btnLabel,
+  .btnLabel--small,
+  .btnLabel--wide {
+    top: -19px;
+    width: 254px;
+    height: 38px;
+    font-size: 1.6rem;
+  }
+  .btnLabel:after {
+    bottom: -5px;
+    width: 12px;
+    height: 12px;
+  }
+  .btn {
+    width: calc(100% - 6px);
+    height: 96px;
+    margin: 3px auto;
+    border-width: 2.4px;
+    box-shadow:
+      0 0 0 3px #fff,
+      0 7px 7px rgba(0, 0, 0, 0.25);
+  }
+  .btnLabel + .btn {
+    padding-top: 6px;
+  }
+  .btn__text {
+    font-size: 2.4rem;
+  }
+  .btn__arrow,
+  .btnLabel + .btn .btn__arrow {
+    right: 22px;
+    margin-top: -9px;
+    border-top-width: 9px;
+    border-bottom-width: 9px;
+    border-left-width: 15px;
+  }
+
+  /* ---------- 共通：見出し ---------- */
+  .sec-head {
+    gap: 10px;
+  }
+  .sec-head__label {
+    font-size: 2.2rem;
+  }
+  .sec-head__title,
+  .sec-head__title--small {
+    font-size: 3.2rem;
+    line-height: 1.4;
+    gap: 12px;
+  }
+  .sec-head__title--flow {
+    line-height: 1.4;
+  }
+  .sec-head__logo img {
+    width: 300px;
+  }
+  .sec-head__logoText {
+    font-size: 3.2rem;
+  }
+
+  /* ---------- FV ---------- */
+  .fv {
+    --fvx: max(24px, calc((100vw - 1160px) / 2));
+  }
+  .fv__main {
+    height: 800px;
+    overflow: hidden;
+    background: #fff url(img/top/fv_pc_bg.jpg) center top / cover no-repeat;
+  }
+  .fv__main:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 55%, #fff 98%),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0) 55%);
+  }
+  .fv__photos {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 889px;
+    height: 738px;
+  }
+  .fv__photo {
+    position: absolute;
+    top: 0;
+    max-width: none;
+    height: 738px;
+  }
+  .fv__photo--01 {
+    left: 0;
+    width: 575px;
+    z-index: 1;
+  }
+  .fv__photo--02 {
+    left: 303px;
+    width: 575px;
+    z-index: 0;
+  }
+  .fv__photo--03 {
+    left: 608px;
+    width: 281px;
+    z-index: 2;
+  }
+  .fv__logo {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
+  .fv__badge,
+  .fv__copy,
+  .fv__lead,
+  .fv__feature,
+  .fv__btnArea {
+    z-index: 2;
+  }
+  .fv__badge {
+    top: 141px;
+    left: var(--fvx);
+    transform: none;
+    padding: 4px 16px;
+    font-size: 2rem;
+    letter-spacing: 0.06em;
+  }
+  .fv__copy {
+    top: 190px;
+    left: var(--fvx);
+    width: auto;
+    align-items: flex-start;
+  }
+  .fv__copyLine {
+    justify-content: flex-start;
+  }
+  .fv__copyLine + .fv__copyLine {
+    margin-top: -12px;
+  }
+  .fv__copyText {
+    font-size: 7.2rem;
+  }
+  .fv__copyText--large {
+    font-size: 8.2rem;
+  }
+  .fv__lead {
+    top: 386px;
+    left: var(--fvx);
+    font-size: 3rem;
+    letter-spacing: 0.06em;
+  }
+  .fv__feature {
+    top: 468px;
+    left: calc(var(--fvx) + 4px);
+    width: auto;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .fv__featureItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 158px;
+    height: 110px;
+    padding: 8px;
+    border-radius: 6px;
+  }
+  .fv__featureItem:before {
+    padding: 1px;
+  }
+  .fv__featureIcon {
+    top: -13px;
+    width: 26px;
+  }
+  .fv__featureText {
+    font-size: 1.5rem;
+  }
+  .fv__featureStrong {
+    font-size: 2.1rem;
+  }
+  .fv__price {
+    display: none;
+  }
+  .fv__btnArea {
+    top: 608px;
+    left: var(--fvx);
+    width: min(438px, calc(100vw - 48px));
+    gap: 16px;
+  }
+  .fv__note {
+    font-size: 1.2rem;
+    color: #7a7a7a;
+  }
+
+  /* ---------- キャンペーン ---------- */
+  .campaign {
+    width: 100%;
+    padding: 57px 0 49px;
+  }
+  .campaign__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 565px) auto;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 22px;
+    width: min(1120px, calc(100% - 48px));
+  }
+  .campaign__body {
+    display: contents;
+  }
+  .campaign__head {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .campaign__limit {
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+  .campaign__note {
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 1.4rem;
+    line-height: 1.4;
+  }
+  .campaign__line--bottom {
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .campaign__prices {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    gap: 8px;
+  }
+  .campaign__title {
+    font-size: 2.4rem;
+  }
+  .campaign__limitLabel {
+    padding: 2px 8px;
+    font-size: 2.8rem;
+  }
+  .campaign__limitDate {
+    font-size: 4rem;
+  }
+  .campaign__beforeNum {
+    font-size: 4rem;
+  }
+  .campaign__beforeTax {
+    font-size: 1.4rem;
+  }
+  .campaign__strike {
+    top: 4px;
+    width: 215px;
+  }
+  .campaign__afterNum {
+    font-size: 8rem;
+  }
+  .campaign__afterTax {
+    font-size: 2.4rem;
+    line-height: 1.5;
+  }
+  .campaign__badge {
+    top: -92px;
+    right: -110px;
+    left: auto;
+    width: 200px;
+  }
+
+  /* ---------- PROBLEM ---------- */
+  .problem {
+    gap: 0;
+    min-height: 959px;
+  }
+  .problem__head {
+    height: 356px;
+    margin-bottom: 0;
+    padding: 108px 24px 0;
+    gap: 8px;
+  }
+  .problem__head:before,
+  .problem__head:after {
+    left: 50%;
+    height: 71px;
+  }
+  .problem__head:before {
+    top: 286px;
+  }
+  .problem__label {
+    font-size: 2.2rem;
+  }
+  .problem__title {
+    font-size: 3rem;
+    line-height: 1.9;
+  }
+  .problem__body {
+    gap: 64px;
+    padding: 167px 24px 51px;
+  }
+  .problem__list {
+    gap: 27px;
+    width: min(760px, 100%);
+    align-items: center;
+  }
+  .problem__item {
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #aeb6bf;
+  }
+  .problem__icon {
+    width: 20px;
+    padding-top: 0;
+    margin-right: 0;
+  }
+  .problem__text {
+    font-size: 2rem;
+    letter-spacing: 0.02em;
+  }
+  .problem__answer {
+    width: auto;
+    gap: 8px;
+    align-items: center;
+  }
+  .problem__answerLine {
+    top: 86px;
+    left: -48px;
+    width: 430px;
+  }
+  .problem__answerSub {
+    font-size: 2.4rem;
+    letter-spacing: 0.1em;
+  }
+  .problem__answerMain {
+    font-size: 5.6rem;
+  }
+  .problem__answerMain span {
+    font-size: 4.8rem;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about {
+    gap: 56px;
+    padding-bottom: 127px;
+    background: #f4f9fe url(img/top/about_pc_bg.jpg) center top / cover no-repeat;
+  }
+  .about__chevron {
+    width: 1500px;
+    height: 57px;
+    margin-bottom: -32px;
+  }
+  .about__content {
+    width: min(900px, calc(100% - 48px));
+    gap: 20px;
+    align-items: center;
+  }
+  .about__heading {
+    gap: 12px;
+  }
+  .about__label {
+    font-size: 2.2rem;
+  }
+  .about__title {
+    gap: 12px;
+    font-size: 3rem;
+    line-height: 1.2;
+  }
+  .about__titleLogo img {
+    width: 250px;
+  }
+  .about__catch {
+    align-items: center;
+    gap: 8px;
+  }
+  .about__catchText {
+    padding: 4px 14px;
+    font-size: 2rem;
+  }
+  .concept {
+    width: min(920px, calc(100% - 48px));
+    gap: 28px;
+    padding: 64px 40px 56px;
+  }
+  .concept__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .concept__head {
+    gap: 12px;
+  }
+  .concept__deco--01 {
+    top: 16px;
+    left: -12px;
+    width: 140px;
+  }
+  .concept__deco--02 {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: -12px;
+    width: 110px;
+  }
+  .concept__label {
+    font-size: 2.2rem;
+  }
+  .concept__title {
+    font-size: 4.2rem;
+    line-height: 1.5;
+  }
+  .concept__titleLarge {
+    font-size: 5.4rem;
+  }
+  .concept__titleLine + .concept__titleLine {
+    margin-top: -16px;
+  }
+  .concept__text {
+    font-size: 1.8rem;
+    line-height: 2.1;
+  }
+  .about__photos {
+    display: none;
+  }
+
+  /* ---------- REASON ---------- */
+  .reason {
+    gap: 64px;
+    padding: 127px 24px 147px;
+    background: #e7f4ff url(img/top/reason_pc_bg.jpg) center top / cover no-repeat;
+  }
+  .reason__list {
+    display: grid;
+    grid-template-columns: repeat(3, 342px);
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+  .reason-card--first {
+    padding-bottom: 15px;
+  }
+
+  /* ---------- SUPPORT ---------- */
+  .support {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 500px));
+    justify-content: center;
+    align-items: start;
+    gap: 56px 40px;
+    padding: 100px 24px 109px;
+    background-color: #fff;
+    background-image:
+      linear-gradient(to right, #f1f1f1 1px, transparent 1px),
+      linear-gradient(to bottom, #f1f1f1 1px, transparent 1px);
+    background-size: 62px 62px;
+    background-position: center top;
+    background-repeat: repeat;
+  }
+  .support__head {
+    grid-column: 1 / -1;
+    gap: 10px;
+  }
+  .support__label {
+    font-size: 2.2rem;
+  }
+  .support__title {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 14px 8px;
+  }
+  .support__logo {
+    width: 300px;
+  }
+  .support__titleSub {
+    font-size: 3.2rem;
+    line-height: 1.2;
+  }
+  .support__titleMain {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 3.2rem;
+    line-height: 1.3;
+  }
+  .support-box {
+    gap: 24px;
+    padding: 28px 20px 32px;
+    border-radius: 12px;
+  }
+  .support-box__title {
+    font-size: 2.2rem;
+  }
+  .support-box--after .support-box__line {
+    width: 80px;
+  }
+  .support-box__pickup {
+    display: grid;
+    grid-template-columns: 186px minmax(0, 1fr);
+    grid-template-areas:
+      "img title"
+      "text text";
+    align-items: center;
+    gap: 16px 24px;
+    padding: 28px 24px 24px;
+    border-radius: 8px;
+  }
+  .support-box__pickupLabel {
+    top: -13px;
+    padding: 5px 20px;
+    font-size: 1.5rem;
+  }
+  .support-box__pickupHead {
+    display: contents;
+  }
+  .support-box__pickupThumb,
+  .support-box__pickupImage {
+    grid-area: img;
+    width: 186px;
+    height: 138px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .support-box__pickupTitle {
+    grid-area: title;
+    font-size: 2.6rem;
+  }
+  .support-box__pickupText {
+    grid-area: text;
+    font-size: 1.5rem;
+    line-height: 1.9;
+  }
+  .support-box__icons {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px 8px;
+  }
+  .support-box__icon {
+    gap: 6px;
+  }
+  .support-box__icon img {
+    width: 86px;
+    height: auto;
+  }
+  .support-box__icon p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- CURRICULUM ---------- */
+  .curriculum {
+    gap: 40px;
+    padding: 56px 24px 40px;
+  }
+  .curriculum__summary,
+  .curriculum__list {
+    width: min(1000px, 100%);
+  }
+  .curriculum__summary {
+    gap: 12px;
+    padding: 22px 16px;
+  }
+  .curriculum__period {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  .curriculum__breakdown {
+    gap: 4px;
+    font-size: 2rem;
+  }
+  .curriculum__tag {
+    padding: 6px 8px;
+    font-size: 2rem;
+  }
+  .curriculum__tag--outline {
+    padding: 4px 6px;
+    font-size: 1.4rem;
+  }
+  .curriculum__timeText {
+    font-size: 1.7rem;
+  }
+  .curriculum__list {
+    gap: 22px;
+  }
+  .curriculum__arrow {
+    width: 140px;
+    height: auto;
+    margin: 0;
+  }
+  .curriculum-card {
+    border-radius: 10px;
+  }
+  .curriculum-card__head {
+    gap: 16px;
+    height: 66px;
+    padding: 0 24px;
+  }
+  .curriculum-card__day {
+    font-size: 2.2rem;
+  }
+  .curriculum-card__title {
+    font-size: 2.2rem;
+  }
+  .curriculum-card__body {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    padding: 22px 24px 26px;
+  }
+  .curriculum-card__row {
+    flex: 1;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 32px;
+    width: auto;
+  }
+  .curriculum-card__thumb {
+    width: 273px;
+    height: 202px;
+    border-radius: 6px;
+    object-fit: cover;
+  }
+  .curriculum-card__list {
+    flex: 1;
+    width: auto;
+    gap: 4px;
+    font-size: 1.7rem;
+    line-height: 1.7;
+  }
+  .curriculum-card__homework {
+    position: relative;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+    width: 205px;
+    height: 220px;
+    margin-left: 90px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  .curriculum-card__homework:before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: -78px;
+    width: 70px;
+    height: 70px;
+    transform: translateY(-50%);
+    font-family: Noto Sans JP, sans-serif;
+    font-size: 5.2rem;
+    font-weight: 300;
+    line-height: 66px;
+    text-align: center;
+    color: #fff;
+    background-color: #7eadd8;
+    border-radius: 50%;
+  }
+  .curriculum-card__homeworkThumb {
+    width: 163px;
+    height: 114px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  .curriculum-card__homeworkText {
+    align-items: center;
+    gap: 10px;
+  }
+  .curriculum-card__homeworkTitle {
+    font-size: 2rem;
+  }
+  .curriculum-card__homeworkSub {
+    font-size: 1.2rem;
+  }
+
+  /* ---------- COURSES ---------- */
+  .course {
+    gap: 56px;
+    padding: 100px 0 145px;
+  }
+  .course-card {
+    gap: 36px;
+    width: min(1000px, calc(100% - 48px));
+    padding-bottom: 40px;
+    border-radius: 12px;
+  }
+  .course-card__title {
+    padding: 22px 0;
+    font-size: 2.8rem;
+  }
+  .course-card__body {
+    gap: 32px;
+    padding: 0 40px;
+  }
+  .course-card__main {
+    gap: 28px;
+  }
+  .course-card__priceNum {
+    font-size: 6.4rem;
+  }
+  .course-card__price small {
+    font-size: 1.8rem;
+  }
+  .course-card__menu {
+    gap: 14px;
+    padding-top: 28px;
+  }
+  .course-card__menuTitle {
+    font-size: 2.2rem;
+  }
+  .course-card__menuText {
+    font-size: 1.9rem;
+  }
+  .course-card__table {
+    font-size: 1.6rem;
+  }
+  .course-card__row dt {
+    width: 168px;
+    padding: 20px 20px;
+  }
+  .course-card__row dd {
+    padding: 20px 20px;
+  }
+
+  /* ---------- BEFORE / AFTER ---------- */
+  .beforeafter {
+    gap: 56px;
+    padding: 76px 24px 96px;
+    background: #fff url(img/top/voice_pc_bg.jpg) center top / cover no-repeat;
+  }
+  .beforeafter__list {
+    flex-direction: row;
+    gap: 25px;
+    width: min(1280px, 100%);
+  }
+  .beforeafter-card {
+    flex: 1;
+    gap: 28px;
+    padding: 28px 32px;
+    border-radius: 0 60px 0 60px;
+  }
+  .beforeafter-card:nth-child(1) {
+    order: 2;
+  }
+  .beforeafter-card__person {
+    gap: 12px;
+    width: 141px;
+  }
+  .beforeafter-card__thumb {
+    width: 141px;
+    height: 180px;
+  }
+  .beforeafter-card__name {
+    font-size: 1.4rem;
+  }
+  .beforeafter-card__body {
+    gap: 14px;
+    min-width: 0;
+  }
+  .beforeafter-card__blocks {
+    gap: 12px;
+  }
+  .beforeafter-card__block {
+    gap: 6px;
+  }
+  .beforeafter-card__tag {
+    padding: 5px 8px;
+    font-size: 1.4rem;
+  }
+  .beforeafter-card__lead {
+    font-size: 1.9rem;
+    line-height: 1.6;
+  }
+  .beforeafter-card__result {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+  .beforeafter-card__text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+  }
+
+  /* ---------- INSTRUCTOR ---------- */
+  .instructor {
+    gap: 56px;
+    padding: 100px 24px 120px;
+    background: #eef1f5 url(img/top/coach_pc_bg.jpg) center top / cover no-repeat;
+  }
+  .instructor-card,
+  .instructor-card--02,
+  .instructor-card--03 {
+    display: grid;
+    grid-template-columns: minmax(0, 428px) minmax(0, 578px);
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      "thumb name"
+      "thumb text";
+    column-gap: 78px;
+    width: min(1084px, 100%);
+    height: auto;
+  }
+  .instructor-card__thumb,
+  .instructor-card--02 .instructor-card__thumb {
+    position: static;
+    grid-area: thumb;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center top;
+  }
+  .instructor-card__en,
+  .instructor-card--02 .instructor-card__en,
+  .instructor-card--03 .instructor-card__en,
+  .instructor-card__glow {
+    display: none;
+  }
+  .instructor-card__name,
+  .instructor-card--01 .instructor-card__name {
+    position: static;
+    grid-area: name;
+    width: auto;
+    gap: 4px;
+    padding-top: 4px;
+  }
+  .instructor-card__position {
+    font-size: 1.8rem;
+  }
+  .instructor-card__nameText {
+    font-size: 3.2rem;
+    line-height: 1.4;
+  }
+  .instructor-card__textArea,
+  .instructor-card--02 .instructor-card__textArea,
+  .instructor-card--03 .instructor-card__textArea {
+    position: static;
+    grid-area: text;
+    align-self: end;
+    padding: 24px 0;
+    background: none;
+    border-top: 1px solid #bfc5cc;
+    border-bottom: 1px solid #bfc5cc;
+  }
+  .instructor-card__textArea p {
+    width: auto;
+    font-size: 1.4rem;
+    line-height: 1.9;
+    letter-spacing: 0;
+  }
+
+  /* ---------- CLINIC ---------- */
+  .clinic {
+    gap: 56px;
+    height: auto;
+    padding: 80px 24px 107px;
+  }
+  .clinic__content {
+    display: grid;
+    grid-template-columns: minmax(0, 398px) 436px;
+    grid-template-areas:
+      "logo doctor"
+      "info doctor";
+    grid-template-rows: auto 1fr;
+    justify-content: space-between;
+    width: min(934px, 100%);
+    height: auto;
+  }
+  .clinic__thumb {
+    display: none;
+  }
+  .clinic__logo {
+    display: block;
+    grid-area: logo;
+    width: 265px;
+    height: auto;
+  }
+  .clinic__doctor {
+    display: block;
+    position: relative;
+    grid-area: doctor;
+    width: 436px;
+    height: 436px;
+  }
+  .clinic__doctor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .clinic__doctorName {
+    position: absolute;
+    top: 122px;
+    left: 52px;
+    font-family:
+      Shippori Mincho,
+      Hiragino Mincho ProN,
+      Yu Mincho,
+      serif;
+    font-size: 2.2rem;
+    line-height: 1.5;
+    color: #333;
+  }
+  .clinic__doctorName span {
+    display: block;
+    width: 36px;
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #777;
+  }
+  .clinic__info {
+    position: static;
+    grid-area: info;
+    align-self: end;
+    gap: 20px;
+    padding: 0;
+    background: none;
+  }
+  .clinic__name {
+    width: auto;
+    font-size: 2.6rem;
+  }
+  .clinic__text {
+    width: auto;
+    font-size: 1.4rem;
+    line-height: 1.9;
+  }
+  .clinic-gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- FLOW ---------- */
+  .flow {
+    gap: 56px;
+    padding: 100px 24px 113px;
+  }
+  .flow-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: min(1000px, 100%);
+    padding: 32px;
+    border-radius: 6px;
+  }
+  .flow-info__main {
+    gap: 16px;
+  }
+  .flow-info__head {
+    justify-content: flex-start;
+  }
+  .flow-info__line {
+    display: none;
+  }
+  .flow-info__title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+  .flow-info__list {
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .flow-info__col {
+    gap: 10px;
+  }
+  .flow-info__item {
+    gap: 6px;
+    font-size: 1.8rem;
+  }
+  .flow-info__item img {
+    width: 15px;
+  }
+  .flow-info__detail {
+    flex-shrink: 0;
+    align-items: flex-start;
+    gap: 8px;
+    width: 453px;
+    padding: 20px 24px;
+  }
+  .flow-info__detailRow {
+    width: auto;
+    gap: 14px;
+    font-size: 1.8rem;
+  }
+  .flow-info__detailRow dt {
+    padding: 2px 6px;
+  }
+  .flow__list {
+    gap: 0;
+    width: min(800px, 100%);
+  }
+  .flow__line {
+    top: 70px;
+    bottom: 0;
+    left: 26px;
+    height: auto;
+  }
+  .flow-step {
+    align-items: stretch;
+    gap: 22px;
+    min-height: 230px;
+  }
+  .flow-step__num {
+    z-index: 1;
+    padding: 20px 28px;
+    font-size: 2.2rem;
+    line-height: 1.5;
+  }
+  .flow-step__corner {
+    width: 20px;
+  }
+  .flow-step__body {
+    gap: 10px;
+    width: auto;
+    margin-left: 241px;
+  }
+  .flow-step__title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+  .flow-step__text {
+    font-size: 1.5rem;
+    line-height: 1.9;
+  }
+  .flow__btnArea {
+    width: min(438px, 100%);
+    padding-top: 32px;
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq {
+    gap: 56px;
+    padding: 100px 24px 100px;
+  }
+  .faq__list {
+    gap: 12px;
+    width: min(1000px, 100%);
+  }
+  .faq-item {
+    padding: 28px 32px;
+  }
+  .faq-item__question {
+    gap: 24px;
+    padding-right: 36px;
+  }
+  .faq-item__q,
+  .faq-item__a {
+    font-size: 3.2rem;
+  }
+  .faq-item__questionText {
+    padding-top: 4px;
+    font-size: 1.8rem;
+  }
+  .faq-item__icon {
+    top: 14px;
+    width: 20px;
+    height: 8px;
+  }
+  .faq-item[open] .faq-item__icon:before {
+    width: 20px;
+  }
+  .faq-item__answer {
+    gap: 24px;
+    margin-top: 16px;
+  }
+  .faq-item__answerText {
+    padding-top: 4px;
+    font-size: 1.6rem;
+    line-height: 1.9;
+  }
+
+  /* ---------- ACCESS ---------- */
+  .access {
+    display: grid;
+    grid-template-columns: minmax(0, 430px) 415px;
+    justify-content: center;
+    align-items: center;
+    gap: 56px 60px;
+    padding: 100px 24px 97px;
+  }
+  .access .sec-head {
+    grid-column: 1 / -1;
+  }
+  .access__info {
+    grid-column: 1;
+    grid-row: 2;
+    gap: 32px;
+  }
+  .access__thumb {
+    grid-column: 2;
+    grid-row: 2;
+    width: 415px;
+    height: 327px;
+  }
+  .access__name {
+    font-size: 2.8rem;
+  }
+  .access__text,
+  .access__map {
+    font-size: 1.4rem;
+  }
+
+  /* ---------- CTA ---------- */
+  .cta {
+    gap: 56px;
+    height: 722px;
+    padding: 80px 24px;
+    background: #4a86bd url(img/top/cta_pc_bg.jpg) center / cover no-repeat;
+  }
+  .cta__head {
+    gap: 20px;
+    width: min(400px, 100%);
+  }
+  .cta__lead {
+    font-size: 2rem;
+  }
+  .cta__logo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 267.53 / 36;
+    overflow: hidden;
+  }
+  .cta__logo img {
+    width: 115.1%;
+    margin: -7.5% 0 0 -7.5%;
+  }
+  .cta__body {
+    gap: 40px;
+    width: min(640px, 100%);
+  }
+  .cta__textArea {
+    gap: 28px;
+  }
+  .cta__catch {
+    font-size: 3.6rem;
+  }
+  .cta__text {
+    font-size: 1.8rem;
+    line-height: 2.1;
+  }
+
+  /* ---------- footer ---------- */
+  .footer {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 199px;
+  }
+  .footer__copyright {
+    font-size: 1.2rem;
+  }
+}
+
+/* 1179px以下：ナビを非表示（ロゴ + CTAのみ） */
+@media (min-width: 768px) and (max-width: 1179px) {
+  .header__nav {
+    display: none;
+  }
+  .header__btn {
+    margin-left: auto;
+  }
+}
+
+/* 1279px以下：バッジをバーの内側に収める */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .campaign__badge {
+    right: 0;
+    top: -70px;
+    width: 160px;
+  }
+  .campaign__inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+}
+
+/* 1139px以下：REASONは2カラム */
+@media (min-width: 768px) and (max-width: 1139px) {
+  .reason__list {
+    grid-template-columns: repeat(2, 342px);
+  }
+}
+
+/* 1099px以下：SUPPORTは1カラム */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .support {
+    grid-template-columns: minmax(0, 500px);
+  }
+}
+
+/* 999px以下：講師・クリニック・アクセス・カリキュラムを縦積み */
+@media (min-width: 768px) and (max-width: 999px) {
+  .instructor-card,
+  .instructor-card--02,
+  .instructor-card--03 {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "thumb"
+      "name"
+      "text";
+    row-gap: 20px;
+  }
+  .instructor-card__thumb,
+  .instructor-card--02 .instructor-card__thumb {
+    aspect-ratio: 4 / 3;
+  }
+  .clinic__content {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "logo"
+      "doctor"
+      "info";
+    justify-items: center;
+    row-gap: 32px;
+  }
+  .clinic__info {
+    align-self: center;
+    text-align: center;
+  }
+  .access {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .access__info,
+  .access__thumb {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+  }
+  .access__thumb {
+    width: 100%;
+    max-width: 415px;
+  }
+  .flow-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .flow-info__detail {
+    width: auto;
+  }
+  .beforeafter__list {
+    flex-direction: column;
+  }
+  .beforeafter-card:nth-child(1) {
+    order: 0;
+  }
+  .curriculum-card__body {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .curriculum-card__homework {
+    margin-left: 70px;
+  }
+}
+
+/* 1099px以下：FV写真を背景に薄く敷く／文字サイズを少し縮小 */
+@media (min-width: 768px) and (max-width: 1099px) {
+  .fv__photos {
+    right: -140px;
+    opacity: 0.3;
+  }
+  .fv__copyText {
+    font-size: 6rem;
+  }
+  .fv__copyText--large {
+    font-size: 6.8rem;
+  }
+  .fv__lead {
+    font-size: 2.4rem;
+  }
+}
+
+/* 999px以下：キャンペーンバーを縦積み中央寄せ */
+@media (min-width: 768px) and (max-width: 999px) {
+  .campaign__inner {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    row-gap: 18px;
+  }
+  .campaign__head,
+  .campaign__limit,
+  .campaign__note,
+  .campaign__line--bottom,
+  .campaign__prices {
+    grid-column: 1;
+  }
+  .campaign__prices {
+    grid-row: 5;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .campaign__badge {
+    top: -40px;
+    right: 8px;
+    width: 130px;
+  }
+}
+
+/* 1000〜1279px：価格が小さくなる分、バッジも縮めて重なりを防ぐ */
+@media (min-width: 1000px) and (max-width: 1279px) {
+  .campaign__afterNum {
+    font-size: 6.4rem;
+  }
+  .campaign__beforeNum {
+    font-size: 3.2rem;
+  }
+  .campaign__strike {
+    width: 170px;
+  }
+  .campaign__badge {
+    top: -52px;
+    right: -6px;
+    width: 120px;
+  }
+  .campaign__prices {
+    padding-top: 28px;
+  }
+}
+
+/* キャンペーンバッジが上のFVに隠れないよう前面へ */
+@media (min-width: 768px) {
+  .fv {
+    z-index: 0;
+  }
+  .fv__main {
+    overflow: hidden;
+  }
+  .campaign {
+    position: relative;
+    z-index: 5;
+    overflow: visible;
+  }
+}
+
+/* バッジはバー(.campaign)基準で配置：どの幅でもバーの上端から必ずはみ出して前面に出す */
+@media (min-width: 768px) {
+  .campaign__inner {
+    position: static;
+  }
+  .campaign__badge {
+    top: -34px;
+    left: auto;
+    right: clamp(8px, calc(50vw - 670px), 50px);
+    z-index: 6;
+  }
+}
+@media (min-width: 768px) and (max-width: 999px) {
+  .campaign__badge {
+    top: -30px;
+  }
+}

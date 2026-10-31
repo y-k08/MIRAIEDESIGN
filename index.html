@@ -123,13 +123,50 @@
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="content-wrap">
+    <!-- ============================================ -->
+    <!-- HEADER (PC only) -->
+    <!-- ============================================ -->
+    <header class="header">
+      <a
+        href="#top"
+        class="header__logo"
+        ><img
+          src="img/top/header_logo.png"
+          alt="MIRAIÉ DESIGN"
+      /></a>
+      <nav class="header__nav">
+        <ul class="header__list">
+          <li><a href="#about"><span class="header__en">ABOUT</span><span class="header__ja">スクールについて</span></a></li>
+          <li><a href="#reason"><span class="header__en">REASON</span><span class="header__ja">選ばれる理由</span></a></li>
+          <li><a href="#curriculum"><span class="header__en">CURRICULUM</span><span class="header__ja">カリキュラム</span></a></li>
+          <li><a href="#courses"><span class="header__en">COURSES</span><span class="header__ja">コース料金</span></a></li>
+          <li><a href="#beforeafter"><span class="header__en">VOICE</span><span class="header__ja">卒業生</span></a></li>
+          <li><a href="#coach"><span class="header__en">COACH</span><span class="header__ja">講師紹介</span></a></li>
+          <li><a href="#clinic"><span class="header__en">CLINIC</span><span class="header__ja">運営クリニック</span></a></li>
+          <li><a href="#faq"><span class="header__en">FAQ</span><span class="header__ja">よくある質問</span></a></li>
+        </ul>
+      </nav>
+      <a
+        href="https://liff.line.me/2007971611-4rdJ1JGX/landing?follow=%40156evkhj&lp=sFBxKf&liff_id=2007971611-4rdJ1JGX"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="header__btn"
+        >まずは無料相談会に参加する</a
+      >
+    </header>
+
+    <div class="content-wrap" id="top">
       <main class="main">
         <!-- ============================================ -->
         <!-- FV -->
         <!-- ============================================ -->
         <section class="fv">
           <div class="fv__main">
+            <div class="fv__photos" aria-hidden="true">
+              <img src="img/top/fv_pc_photo01.webp" alt="" class="fv__photo fv__photo--01" />
+              <img src="img/top/fv_pc_photo02.webp" alt="" class="fv__photo fv__photo--02" />
+              <img src="img/top/fv_pc_photo03.webp" alt="" class="fv__photo fv__photo--03" />
+            </div>
             <h1 class="fv__logo">
               <img
                 src="img/top/logo.png"
@@ -192,7 +229,7 @@
 
             <div class="fv__btnArea">
               <div class="btnWrap">
-                <p class="btnLabel">話を聞くだけでもOK</p>
+                <p class="btnLabel btnLabel--wide">卒業後の働き方まで聞ける</p>
                 <a
                   href="https://liff.line.me/2007971611-4rdJ1JGX/landing?follow=%40156evkhj&lp=sFBxKf&liff_id=2007971611-4rdJ1JGX"
                   target="_blank"
@@ -378,12 +415,12 @@
               </h3>
             </div>
             <p class="concept__text">
-              私たちが大切にしているのは、<br />
-              学んだ技術を、その人らしい<br />
+              私たちが大切にしているのは、<br class="u-sp" />
+              学んだ技術を、その人らしい<br class="u-sp" />
               未来につなげること。<br />
-              アートメイクの技術習得から、<br />
+              アートメイクの技術習得から、<br class="u-sp" />
               卒業後の働き方やキャリアまで、<br />
-              一人ひとりの希望に寄り添い、<br />
+              一人ひとりの希望に寄り添い、<br class="u-sp" />
               サポートします。
             </p>
           </div>
@@ -869,7 +906,7 @@
                     <li>色素の定着状態を確認し、状態に応じたリタッチ技術を実践的に学びます。</li>
                     <li>・アイブロウ</li>
                     <li>・リップ</li>
-                    <li>・アイライン(リタッチ施術)</li>
+                    <li>・アイライン</li>
                   </ul>
                 </div>
               </div>
@@ -1189,6 +1226,22 @@
 
           <div class="clinic__content">
             <img
+              src="img/top/clinic_logo.png"
+              loading="lazy"
+              decoding="async"
+              alt=""
+              class="clinic__logo"
+            />
+            <div class="clinic__doctor">
+              <img
+                src="img/top/clinic_doctor.jpg"
+                loading="lazy"
+                decoding="async"
+                alt="院長 山本 幸一郎"
+              />
+              <p class="clinic__doctorName"><span>院長</span>山本 幸一郎</p>
+            </div>
+            <img
               src="img/top/clinic_main.jpg"
               loading="lazy"
               decoding="async"
@@ -1199,7 +1252,7 @@
               <h3 class="clinic__name">BiBiクリニック</h3>
               <p class="clinic__text">
                 〒542-0081<br />
-                大阪市中央区南船場3-8-15<br />
+                大阪市中央区南船場3-8-15<br class="u-sp" />
                 ACN心斎橋PLACEビル3F・4F
               </p>
             </div>
@@ -1207,12 +1260,12 @@
         </section>
 
         <div class="clinic-gallery">
-          <img
+          <picture><source media="(min-width: 768px)" srcset="img/top/clinic_gallery_pc.jpg" width="1440" height="353" /><img
             src="img/top/clinic_gallery.jpg"
               loading="lazy"
               decoding="async"
             alt=""
-          />
+          /></picture>
         </div>
 
         <!-- ============================================ -->
@@ -1224,7 +1277,7 @@
         >
           <div class="sec-head">
             <p class="sec-head__label eng">FLOW</p>
-            <h2 class="sec-head__title sec-head__title--flow emphasis">無料相談会<br />ご予約の流れ</h2>
+            <h2 class="sec-head__title sec-head__title--flow emphasis">無料相談会<br class="u-sp" />ご予約の流れ</h2>
           </div>
 
           <div class="flow-info">
@@ -1325,7 +1378,7 @@
 
           <div class="flow__btnArea">
             <div class="btnWrap">
-              <p class="btnLabel btnLabel--small">話を聞くだけでもOK</p>
+              <p class="btnLabel btnLabel--wide">卒業後の働き方まで聞ける</p>
               <a
                 href="https://liff.line.me/2007971611-4rdJ1JGX/landing?follow=%40156evkhj&lp=sFBxKf&liff_id=2007971611-4rdJ1JGX"
                 target="_blank"
@@ -1508,12 +1561,12 @@
                 />
                 <div class="access__detail">
                   <p class="access__text">
-                    大阪府大阪市中央区南船3丁目7-27<br />
+                    大阪府大阪市中央区南船場3丁目7-27<br />
                     NLC心斎橋 3I
                   </p>
                   <a
                     class="access__map"
-                    href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%97%E8%88%B93%E4%B8%81%E7%9B%AE7-27+NLC%E5%BF%83%E6%96%8E%E6%A9%8B"
+                    href="https://www.google.com/maps/search/?api=1&amp;query=%E5%A4%A7%E9%98%AA%E5%BA%9C%E5%A4%A7%E9%98%AA%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%8C%BA%E5%8D%97%E8%88%B9%E5%A0%B43%E4%B8%81%E7%9B%AE7-27+NLC%E5%BF%83%E6%96%8E%E6%A9%8B"
                     target="_blank"
                     rel="noopener noreferrer"
                     >Googleマップ ＞</a

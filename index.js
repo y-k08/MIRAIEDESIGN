@@ -1,6 +1,6 @@
 window.addEventListener("load", function () {
   /* ============================================ */
-  // 960px以下のレスポンシブ固定
+  // 767px以下はSPレイアウト固定(width=375)、768px以上はPC/タブレット用に通常のviewport
   /* ============================================ */
   !(function () {
     const viewport = document.querySelector('meta[name="viewport"]');
@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
 
     function switchViewport() {
       const value =
-        window.outerWidth > 960
+        window.outerWidth > 767
           ? "width=device-width,initial-scale=1"
           : "width=375";
 
