@@ -141,9 +141,6 @@ summary::-webkit-details-marker {
   background-color: #fff;
   transform: translateX(-50%) rotate(45deg);
 }
-.btnLabel--small {
-  font-size: 1.1rem;
-}
 .btnLabel--wide {
   top: -17px;
   width: 180px;
@@ -2258,7 +2255,6 @@ summary::-webkit-details-marker {
     width: min(438px, 100%);
   }
   .btnLabel,
-  .btnLabel--small,
   .btnLabel--wide {
     top: -19px;
     width: 254px;
@@ -2324,7 +2320,7 @@ summary::-webkit-details-marker {
   .fv__main {
     height: 800px;
     overflow: hidden;
-    background: #fff url(img/top/fv_pc_bg.jpg) center top / cover no-repeat;
+    background: #fff url(img/top/fv_pc_bg.webp) center top / cover no-repeat;
   }
   .fv__main:after {
     content: "";
@@ -2609,7 +2605,7 @@ summary::-webkit-details-marker {
   .about {
     gap: 56px;
     padding-bottom: 127px;
-    background: #f4f9fe url(img/top/about_pc_bg.jpg) center top / cover no-repeat;
+    background: #f4f9fe url(img/top/about_pc_bg.webp) center top / cover no-repeat;
   }
   .about__chevron {
     width: 1500px;
@@ -2693,7 +2689,7 @@ summary::-webkit-details-marker {
   .reason {
     gap: 64px;
     padding: 127px 24px 147px;
-    background: #e7f4ff url(img/top/reason_pc_bg.jpg) center top / cover no-repeat;
+    background: #e7f4ff url(img/top/reason_pc_bg.webp) center top / cover no-repeat;
   }
   .reason__list {
     display: grid;
@@ -2991,7 +2987,7 @@ summary::-webkit-details-marker {
   .beforeafter {
     gap: 56px;
     padding: 76px 24px 96px;
-    background: #fff url(img/top/voice_pc_bg.jpg) center top / cover no-repeat;
+    background: #fff url(img/top/voice_pc_bg.webp) center top / cover no-repeat;
   }
   .beforeafter__list {
     flex-direction: row;
@@ -3049,7 +3045,7 @@ summary::-webkit-details-marker {
   .instructor {
     gap: 56px;
     padding: 100px 24px 120px;
-    background: #eef1f5 url(img/top/coach_pc_bg.jpg) center top / cover no-repeat;
+    background: #eef1f5 url(img/top/coach_pc_bg.webp) center top / cover no-repeat;
   }
   .instructor-card,
   .instructor-card--02,
@@ -3371,7 +3367,7 @@ summary::-webkit-details-marker {
     gap: 56px;
     height: 722px;
     padding: 80px 24px;
-    background: #4a86bd url(img/top/cta_pc_bg.jpg) center / cover no-repeat;
+    background: #4a86bd url(img/top/cta_pc_bg.webp) center / cover no-repeat;
   }
   .cta__head {
     gap: 20px;

@@ -1,6 +1,1 @@
-<svg width="57" height="55" viewBox="0 0 57 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="57" height="55" rx="27.5" fill="white"/>
-<path d="M22.668 18.1665H34.335M22.668 36.8337H34.335" stroke-width="1.86672" stroke-linecap="round" stroke-linejoin="round" stroke="#3A7FB8"/>
-<path d="M23.8359 18.1665C23.8359 22.8333 33.1695 22.8333 33.1695 27.5001C33.1695 32.1669 23.8359 32.1669 23.8359 36.8337" stroke-width="1.86672" stroke-linecap="round" stroke-linejoin="round" stroke="#3A7FB8"/>
-<path d="M33.1695 18.1665C33.1695 22.8333 23.8359 22.8333 23.8359 27.5001C23.8359 32.1669 33.1695 32.1669 33.1695 36.8337" stroke-width="1.86672" stroke-linecap="round" stroke-linejoin="round" stroke="#3A7FB8"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="57" height="55" fill="none" viewBox="0 0 57 55"><rect width="57" height="55" fill="#fff" rx="27.5"/><path stroke="#3a7fb8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.867" d="M22.668 18.167h11.667M22.668 36.834h11.667M23.836 18.167c0 4.666 9.334 4.666 9.334 9.333s-9.334 4.667-9.334 9.334"/><path stroke="#3a7fb8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.867" d="M33.17 18.167c0 4.666-9.334 4.666-9.334 9.333s9.334 4.667 9.334 9.334"/></svg>
