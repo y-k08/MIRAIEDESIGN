@@ -3424,6 +3424,22 @@ summary::-webkit-details-marker {
   }
 }
 
+/* 1180〜1439px：ナビ項目が長くなるため、余白・文字・ボタン幅を幅に合わせて縮める(1440pxで元の寸法) */
+@media (min-width: 1180px) and (max-width: 1439px) {
+  .header {
+    padding: 0 16px;
+  }
+  .header__list a {
+    padding: 0 clamp(5px, calc(5px + (100vw - 1180px) * 0.0423), 16px);
+  }
+  .header__en {
+    font-size: clamp(1.5rem, calc(15px + (100vw - 1180px) * 0.0077), 1.7rem);
+  }
+  .header__btn {
+    width: clamp(200px, calc(200px + (100vw - 1180px) * 0.154), 240px);
+  }
+}
+
 /* 1279px以下：バッジをバーの内側に収める */
 @media (min-width: 768px) and (max-width: 1279px) {
   .campaign__badge {
