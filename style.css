@@ -58,6 +58,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+source {
+  display: none;
+}
 small {
   font-size: inherit;
 }
@@ -1141,16 +1144,34 @@ summary::-webkit-details-marker {
 }
 .support-box__pickupHead {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
 }
 .support-box__pickupThumb {
-  width: 102px;
-  height: 76px;
+  width: 277px;
+  height: 206px;
+  object-fit: cover;
   border-radius: 4px;
 }
 .support-box__pickupImage {
   width: 277px;
+  height: 206px;
+  object-fit: cover;
+}
+.support-box__pickupBody {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.support-box__pickupPhotos {
+  display: flex;
+  gap: 9px;
+}
+.support-box__pickupPhotos img {
+  width: 135px;
+  height: 106px;
+  object-fit: cover;
 }
 .support-box__pickupTitle {
   font-size: 1.8rem;
@@ -1177,7 +1198,7 @@ summary::-webkit-details-marker {
 }
 .support-box__icon img {
   width: 57px;
-  height: 55px;
+  height: 57px;
 }
 .support-box__icon p {
   font-size: 1.15rem;
@@ -1240,14 +1261,22 @@ summary::-webkit-details-marker {
 }
 .curriculum__time {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 10px;
 }
 .curriculum__timeText {
-  font-size: 1.4rem;
-  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
   line-height: 1.4;
   white-space: nowrap;
+}
+.curriculum__timeMain {
+  font-size: 1.4rem;
+}
+.curriculum__timeSub {
+  font-size: 1rem;
 }
 .curriculum__list {
   display: flex;
@@ -1341,17 +1370,22 @@ summary::-webkit-details-marker {
 .curriculum-card__homework {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 27px;
   width: 303px;
   padding: 8px 20px;
   background-color: #fff;
   border: 1px dashed #3880b4;
   border-radius: 5px;
 }
+.curriculum-card__homework picture,
+.instructor-card picture {
+  display: contents;
+}
 .curriculum-card__homeworkThumb {
-  width: 88px;
-  height: 61px;
-  border-radius: 3px;
+  display: block;
+  width: 43px;
+  height: 52px;
+  object-fit: contain;
 }
 .curriculum-card__homeworkText {
   display: flex;
@@ -1714,7 +1748,7 @@ summary::-webkit-details-marker {
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  height: 568px;
+  height: 485px;
   padding: 24px 10px;
   background-color: #f5f5f5;
 }
@@ -1722,41 +1756,72 @@ summary::-webkit-details-marker {
   position: relative;
   flex-shrink: 0;
   width: 375px;
-  height: 503px;
+  height: 318px;
+}
+.clinic__content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 318px;
+  background: linear-gradient(180deg, rgba(245, 245, 245, 0) 52%, #f5f5f5 96%);
+  pointer-events: none;
 }
 .clinic__thumb {
   position: absolute;
-  top: -4px;
-  left: -104px;
-  width: 583px;
+  top: 0;
+  left: 0;
+  width: 375px;
   max-width: none;
-  height: 380px;
+  height: 318px;
 }
 .clinic__info {
   position: absolute;
-  top: 291px;
-  left: 26px;
+  z-index: 1;
+  top: 247px;
+  left: 23px;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  padding: 20px;
   color: #333;
-  background: linear-gradient(166deg, rgba(255, 255, 255, 0.8) 8%, rgba(255, 255, 255, 0) 100%);
 }
 .clinic__name {
-  width: 282px;
-  font-size: 1.6rem;
+  font-family:
+    Shippori Mincho,
+    Hiragino Mincho ProN,
+    Yu Mincho,
+    serif;
+  font-size: 2.8rem;
   font-weight: 600;
   line-height: 1.7;
 }
 .clinic__text {
-  width: 282px;
   font-size: 1.2rem;
   line-height: 1.7;
+  white-space: nowrap;
 }
 .clinic-gallery img {
+  display: block;
   width: 375px;
-  height: 92px;
+  height: 139px;
+}
+.flow__photo {
+  position: relative;
+  width: 375px;
+  height: 251px;
+  margin: 0 0 -40px;
+}
+.flow__photo img {
+  max-width: none;
+}
+.flow__photoMark {
+  position: absolute;
+  top: 199px;
+  left: 2px;
+  width: 372px;
+  height: 50px;
+  mix-blend-mode: hard-light;
 }
 
 /* ============================================ */
@@ -2787,6 +2852,13 @@ summary::-webkit-details-marker {
     grid-area: title;
     font-size: 2.6rem;
   }
+  .support-box__pickupBody {
+    display: block;
+    grid-area: text;
+  }
+  .support-box__pickupBody .support-box__pickupText {
+    display: inline;
+  }
   .support-box__pickupText {
     grid-area: text;
     font-size: 1.5rem;
@@ -2837,8 +2909,11 @@ summary::-webkit-details-marker {
     padding: 4px 6px;
     font-size: 1.4rem;
   }
-  .curriculum__timeText {
-    font-size: 1.7rem;
+  .curriculum__timeMain {
+    font-size: 2.4rem;
+  }
+  .curriculum__timeSub {
+    font-size: 1.6rem;
   }
   .curriculum__list {
     gap: 22px;
@@ -3118,14 +3193,17 @@ summary::-webkit-details-marker {
   }
   .clinic__content {
     display: grid;
-    grid-template-columns: minmax(0, 398px) 436px;
+    grid-template-columns: minmax(0, 398px) 476px;
     grid-template-areas:
       "logo doctor"
       "info doctor";
     grid-template-rows: auto 1fr;
     justify-content: space-between;
-    width: min(934px, 100%);
+    width: min(974px, 100%);
     height: auto;
+  }
+  .clinic__content::after {
+    display: none;
   }
   .clinic__thumb {
     display: none;
@@ -3140,34 +3218,13 @@ summary::-webkit-details-marker {
     display: block;
     position: relative;
     grid-area: doctor;
-    width: 436px;
+    width: 476px;
     height: 436px;
   }
   .clinic__doctor img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .clinic__doctorName {
-    position: absolute;
-    top: 122px;
-    left: 52px;
-    font-family:
-      Shippori Mincho,
-      Hiragino Mincho ProN,
-      Yu Mincho,
-      serif;
-    font-size: 2.2rem;
-    line-height: 1.5;
-    color: #333;
-  }
-  .clinic__doctorName span {
-    display: block;
-    width: 36px;
-    margin-bottom: 4px;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    border-bottom: 1px solid #777;
   }
   .clinic__info {
     position: static;
@@ -3178,13 +3235,13 @@ summary::-webkit-details-marker {
     background: none;
   }
   .clinic__name {
-    width: auto;
+    font-family: inherit;
     font-size: 2.6rem;
   }
   .clinic__text {
-    width: auto;
     font-size: 1.4rem;
     line-height: 1.9;
+    white-space: normal;
   }
   .clinic-gallery img {
     width: 100%;
